@@ -13,7 +13,8 @@ minetest.register_on_chat_message(function(name, message)
 	if (message == message:upper()) and (message:len() > 4) then
 		minetest.show_formspec(name, "caps_alert:warning",
 					"size[6,3]" ..
-					"label[0,0.5;Stop using excessive CAPS,\nYou will be kicked if you keep using CAPS again]" ..
+					"label[1.5,0.5;Stop using excessive CAPS!]" ..
+					"label[0.75,1;You will be kicked if you don't stop using CAPS.]" ..
 					"button_exit[1,2;4,1;exit;OK]"
 		)
 		
