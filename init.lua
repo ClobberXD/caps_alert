@@ -11,7 +11,6 @@ end)
 
 -- checks messages for CAPITAL letters, catches NEarLY all caps messages too
 function checkMessages(message)
-	local messagelen = message:len()
 	local capscounter = 0 -- used to count capital letters in messages
 
 	--[[ 
@@ -27,9 +26,6 @@ function checkMessages(message)
 			capscounter = capscounter + 1
 		end
 	end
-	print("capscounter ",capscounter)
-	print("messagelen",messagelen)
-
 	if capscounter >= 1 then
 		return(true)
 	end
