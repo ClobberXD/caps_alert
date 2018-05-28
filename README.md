@@ -11,4 +11,4 @@ This simple mod catches chat messages with ALL-CAPS. The player is warned thrice
 ![screenshot](https://raw.githubusercontent.com/ClobberXD/caps_alert/master/screenshot.png)
 
 #### TODO
-- [ ] Detect _NEArLY ALL-CaPS_ messages
+- [X] Detect _NEArLY ALL-CaPS_ messages
