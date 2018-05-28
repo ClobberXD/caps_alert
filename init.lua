@@ -3,6 +3,7 @@
 --
 
 local violations = {}
+local setting = "caps_alert.sensitivity"
 
 -- Resets number of violations on player (re-)join
 minetest.register_on_joinplayer(function(player)
@@ -12,6 +13,16 @@ end)
 -- checks messages for CAPITAL letters, catches NEarLY all caps messages too
 function checkMessages(message)
 	local capscounter = 0 -- used to count capital letters in messages
+	--[[
+	 minetest.conf setting to change the sensitivity of the filter
+	 the sensitivity is the percentage of the message that has to be in CAPS
+	 for the filter to flag it as shouting, defaults to 50
+	--]]
+	local sensitivity = tonumber(minetest.settings:get(setting))
+	if not sensitivity then
+		sensitivity = 50
+		minetest.settings:set(setting, "50")
+	end
 
 	--[[ 
 	 iterate over each character in a message, 
@@ -26,7 +37,8 @@ function checkMessages(message)
 			capscounter = capscounter + 1
 		end
 	end
-	if capscounter >= 1 then
+	-- if the percentage of CAPS letters in the message exceed the sensitivity setting, return true
+	if (capscounter * 100 / message:len()) >= sensitivity then
 		return(true)
 	end
 end
