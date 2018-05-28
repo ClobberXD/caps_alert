@@ -1,6 +1,6 @@
-# caps_alert 1.0
+# Caps Alert [caps_alert]
 
-This simple mod catches chat messages with ALL-CAPS. The player is warned thrice, and gets kicked on the 4th violation. Online moderators are notified of the kick, so that they know that a player has already been using all-CAPS for awhile, and can mete out tougher punishments.
+This simple mod catches chat messages with ALL-CAPS and NEArLY ALL-cAPS. The player is warned thrice, and gets kicked on the 4th violation. Online moderators are notified of the kick, so that they know that a player has already been using CAPS for awhile, and can mete out appropriate punishments.
 
 #### Mod dependencies: none
 
