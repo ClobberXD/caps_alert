@@ -1,2 +1,2 @@
 #Custom sensitivity of the CAPS filter
-caps_alert.sensitivity (filter sensitivity) int 50
+caps_alert.sensitivity (Caps Sensitivity) int 50 1 100
