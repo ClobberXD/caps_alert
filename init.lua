@@ -52,8 +52,8 @@ minetest.register_on_chat_message(function(name, message)
 			for _, player in pairs(minetest.get_connected_players()) do
 				local moderator = player:get_player_name()
 				if minetest.check_player_privs(moderator, {kick = true, ban = true}) then
-					minetest.chat_send_player(player_name, minetest.colorize("#FFFF00",
-						"-!- caps_alert: " ..name.. " has been kicked for use of excessive CAPS.")
+					minetest.chat_send_player(moderator, minetest.colorize("#FFFF00",
+						"-!- caps_alert: " .. name .. " has been kicked for use of excessive CAPS.")
 				end
 			end
 		end
